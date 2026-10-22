@@ -1,0 +1,693 @@
+/* ============================================================
+   navbar.css
+   ------------------------------------------------------------
+   Everything to do with navigation:
+     1. Top bar (phone, email, admission link, social icons)
+     2. Sticky navbar (transparent over hero -> solid on scroll)
+     3. Desktop menu with hover/focus dropdowns
+     4. Mobile slide-in drawer + accordion sub-menus
+     5. Mobile sticky bottom action bar
+   Written mobile-first. Breakpoints:
+     600px  - show the email text in the top bar
+     900px  - show the admission link + social icons in the top bar
+     1024px - switch from the hamburger drawer to the full menu
+     1200px - restore the roomier menu spacing
+   ============================================================ */
+
+/* Anchor targets stop just below the sticky navbar */
+.section[id],
+section[id] {
+  scroll-margin-top: 88px;
+}
+
+/* ============================================================
+   1. TOP BAR
+   ============================================================ */
+.topbar {
+  background-color: var(--color-primary);
+  color: var(--color-text-invert);
+  font-size: var(--fs-xs);
+}
+
+.topbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  min-height: 38px;
+  padding-block: var(--space-3xs);
+}
+
+.topbar__contact,
+.topbar__social {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.topbar__right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.topbar__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3xs);
+  padding-block: var(--space-3xs);
+  color: inherit;
+  transition: color var(--dur-fast) var(--ease);
+}
+
+.topbar__link:hover {
+  color: var(--color-secondary);
+}
+
+.topbar__link svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+.topbar__social {
+  display: none;
+}
+
+.topbar__social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  color: inherit;
+  transition:
+    background-color var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease);
+}
+
+.topbar__social a:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+}
+
+.topbar__social svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* On phones keep the bar uncluttered: email becomes an icon only,
+   and the enquiry link + socials live in the drawer. */
+.topbar__link-text {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .topbar__link-text {
+    display: inline;
+  }
+}
+
+@media (min-width: 900px) {
+  .topbar__social {
+    display: flex;
+  }
+}
+
+/* ============================================================
+   2. STICKY NAVBAR
+   ============================================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-nav);
+  background-color: transparent;
+  transition:
+    background-color var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease);
+}
+
+/* Transparent over the hero at the very top, then solid once the
+   visitor scrolls (JS adds .is-scrolled). */
+/* Pages without a full hero (leadership.html and friends) carry
+   .site-header--solid, so the bar is opaque from the very top. */
+.site-header.is-scrolled,
+.site-header--solid {
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2xs);
+  min-height: var(--header-height);
+  transition: min-height var(--dur) var(--ease);
+}
+
+/* Slight shrink when scrolled */
+.site-header.is-scrolled .navbar {
+  min-height: var(--header-height-compact);
+}
+
+/* --- Brand: school crest + school name --- */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  min-width: 0;
+  padding-block: var(--space-2xs);
+}
+
+/* The school crest (images/logo/logo.png).
+   The artwork is a tall portrait emblem, so its HEIGHT is what makes
+   it look big. Tying that height to the header (minus the brand's own
+   16px of vertical padding) means the crest always fills the bar. */
+.brand__logo {
+  flex-shrink: 0;
+  height: calc(var(--header-height) - 16px);
+  width: auto;
+  object-fit: contain;
+  transition: height var(--dur) var(--ease);
+}
+
+.site-header.is-scrolled .brand__logo {
+  height: calc(var(--header-height-compact) - 16px);
+}
+
+.brand__text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.15;
+}
+
+/* The name sits on two lines beside the tall crest, which keeps the
+   brand narrow while letting the type be noticeably larger. */
+.brand__name {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-primary);
+}
+
+.brand__name-line {
+  display: block;
+}
+
+/* --- Hamburger button (mobile / tablet) --- */
+.nav-toggle {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--dur-fast) var(--ease);
+}
+
+.nav-toggle:hover {
+  background-color: rgba(101, 44, 59, 0.08);
+}
+
+.nav-toggle__bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-primary);
+  transition:
+    transform var(--dur) var(--ease),
+    opacity var(--dur-fast) var(--ease);
+}
+
+/* Hamburger -> X animation while the drawer is open */
+.nav-toggle.is-active .nav-toggle__bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.is-active .nav-toggle__bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.is-active .nav-toggle__bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* --- Desktop menu + Apply button are hidden below 1024px --- */
+.nav-menu,
+.navbar__actions {
+  display: none;
+}
+
+/* ============================================================
+   3. DESKTOP MENU (1024px and up)
+   Compact between 1024px and 1199px, roomier from 1200px.
+   ============================================================ */
+@media (min-width: 1024px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .nav-menu__item {
+    position: relative;
+  }
+
+  .nav-menu__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    position: relative;
+    min-height: 44px;
+    padding: 0.4rem 0.7rem;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+    color: var(--color-text);
+    border-radius: var(--radius-sm);
+    transition: color var(--dur-fast) var(--ease);
+  }
+
+  /* Hide the chevrons until there is room for them (1200px). The
+     dropdown still opens on hover and on keyboard focus. */
+  .nav-menu__link svg {
+    display: none;
+    width: 14px;
+    height: 14px;
+    transition: transform var(--dur-fast) var(--ease);
+  }
+
+  .nav-menu__link:hover,
+  .nav-menu__item:focus-within .nav-menu__link {
+    color: var(--color-primary);
+  }
+
+  /* Gold underline that slides in from the left */
+  .nav-menu__link::after {
+    content: "";
+    position: absolute;
+    left: 0.7rem;
+    right: 0.7rem;
+    bottom: 0.45rem;
+    height: 2px;
+    background-color: var(--color-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--dur) var(--ease);
+  }
+
+  .nav-menu__link:hover::after,
+  .nav-menu__item:focus-within .nav-menu__link::after {
+    transform: scaleX(1);
+  }
+
+  .nav-menu__item:hover > .nav-menu__link svg,
+  .nav-menu__item:focus-within > .nav-menu__link svg {
+    transform: rotate(180deg);
+  }
+
+  .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 250px;
+    margin: 0;
+    padding: var(--space-2xs);
+    list-style: none;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition:
+      opacity var(--dur-fast) var(--ease),
+      transform var(--dur-fast) var(--ease),
+      visibility var(--dur-fast) var(--ease);
+  }
+
+  /* Invisible bridge so the menu does not close in the gap */
+  .submenu::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    height: 10px;
+  }
+
+  .nav-menu__item:hover > .submenu,
+  .nav-menu__item:focus-within > .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .submenu__link {
+    display: block;
+    padding: 0.6rem 0.75rem;
+    font-size: var(--fs-sm);
+    color: var(--color-text);
+    border-radius: var(--radius-sm);
+    border-left: 2px solid transparent;
+    transition:
+      background-color var(--dur-fast) var(--ease),
+      color var(--dur-fast) var(--ease),
+      border-color var(--dur-fast) var(--ease);
+  }
+
+  .submenu__link:hover,
+  .submenu__link:focus-visible {
+    background-color: var(--color-canvas);
+    border-left-color: var(--color-accent);
+    color: var(--color-primary);
+  }
+
+  .navbar__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2xs);
+  }
+
+  .navbar__actions .btn {
+    padding-inline: 1.1rem;
+  }
+}
+
+/* Roomier menu once there is space for it */
+@media (min-width: 1200px) {
+  .nav-menu__item {
+    padding-inline: 0.1rem;
+  }
+
+  .nav-menu__link {
+    padding: 0.4rem 0.85rem;
+    font-size: var(--fs-sm);
+  }
+
+  .nav-menu__link svg {
+    display: block;
+  }
+
+  .nav-menu__link::after {
+    left: 0.85rem;
+    right: 0.85rem;
+  }
+
+  .navbar__actions .btn {
+    padding-inline: 1.4rem;
+  }
+}
+
+/* ============================================================
+   4. MOBILE / TABLET DRAWER (below 1024px)
+   ============================================================ */
+.drawer {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-drawer);
+}
+
+.drawer[hidden] {
+  display: none;
+}
+
+.drawer__backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(41, 15, 24, 0.55);
+  opacity: 0;
+  transition: opacity var(--dur) var(--ease);
+}
+
+.drawer.is-open .drawer__backdrop {
+  opacity: 1;
+}
+
+.drawer__panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: min(88vw, 380px);
+  height: 100%;
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-lg);
+  transform: translateX(100%);
+  transition: transform var(--dur) var(--ease);
+}
+
+.drawer.is-open .drawer__panel {
+  transform: translateX(0);
+}
+
+.drawer__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding: var(--space-xs) var(--space-xs) var(--space-xs) var(--space-md);
+  background-color: var(--color-primary);
+  color: var(--color-text-invert);
+}
+
+.drawer__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+}
+
+.drawer__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-invert);
+  transition: background-color var(--dur-fast) var(--ease);
+}
+
+.drawer__close:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+
+.drawer__close svg {
+  width: 22px;
+  height: 22px;
+}
+
+.drawer__nav {
+  flex: 1;
+  padding: var(--space-sm);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.drawer__foot {
+  display: grid;
+  gap: var(--space-2xs);
+  padding: var(--space-sm);
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-canvas);
+}
+
+/* --- Accordion list --- */
+.drawer-menu,
+.drawer-menu__sub {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.drawer-menu__item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.drawer-menu__link,
+.drawer-menu__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 48px;
+  padding: var(--space-2xs) var(--space-3xs);
+  font-family: var(--font-heading);
+  font-size: var(--fs-base);
+  font-weight: 600;
+  text-align: left;
+  color: var(--color-primary);
+}
+
+.drawer-menu__link:hover,
+.drawer-menu__toggle:hover {
+  color: var(--color-accent-dark);
+}
+
+.drawer-menu__toggle svg {
+  width: 18px;
+  height: 18px;
+  transition: transform var(--dur) var(--ease);
+}
+
+.drawer-menu__toggle[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
+/* Collapsible sub-menu (animated max-height) */
+.drawer-menu__sub {
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition:
+    max-height var(--dur) var(--ease),
+    visibility var(--dur) var(--ease);
+}
+
+.drawer-menu__item.is-open > .drawer-menu__sub {
+  max-height: 520px;
+  visibility: visible;
+}
+
+.drawer-menu__sub li a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: var(--space-2xs) var(--space-2xs) var(--space-2xs) var(--space-md);
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  border-left: 2px solid var(--color-secondary);
+  transition:
+    color var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease),
+    background-color var(--dur-fast) var(--ease);
+}
+
+.drawer-menu__sub li a:hover {
+  color: var(--color-primary);
+  border-left-color: var(--color-accent);
+  background-color: var(--color-canvas);
+}
+
+/* The drawer is desktop-irrelevant */
+@media (min-width: 1024px) {
+  .drawer {
+    display: none;
+  }
+}
+
+/* ============================================================
+   5. MOBILE STICKY BOTTOM ACTION BAR
+   ============================================================ */
+.action-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--z-nav);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  box-shadow: 0 -4px 16px rgba(41, 38, 34, 0.08);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.action-bar__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-height: 56px;
+  padding-block: var(--space-3xs);
+  font-family: var(--font-heading);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--color-primary);
+  transition: background-color var(--dur-fast) var(--ease);
+}
+
+.action-bar__item:active {
+  background-color: var(--color-canvas);
+}
+
+.action-bar__item svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Keep content clear of the bar, and hide the bar on desktop */
+@media (max-width: 1023px) {
+  body {
+    padding-bottom: calc(56px + env(safe-area-inset-bottom));
+  }
+}
+
+@media (min-width: 1024px) {
+  .action-bar {
+    display: none;
+  }
+}
+
+/* ============================================================
+   6. LIGHT TEXT OVER THE HERO
+   ------------------------------------------------------------
+   While the visitor is at the very top and a hero image sits
+   behind the navbar, text switches to white. The page adds
+   .has-hero to <body> once the hero section exists (Step 4).
+   ============================================================ */
+.has-hero .site-header:not(.is-scrolled) .brand__name,
+.has-hero .site-header:not(.is-scrolled) .nav-menu__link {
+  color: #ffffff;
+}
+
+.has-hero .site-header:not(.is-scrolled) .nav-toggle__bar {
+  background-color: #ffffff;
+}
+
+.has-hero .site-header:not(.is-scrolled) .nav-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+
+.has-hero .site-header:not(.is-scrolled) .brand__logo {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* While the drawer is open, stop the page behind it scrolling */
+body.drawer-open {
+  overflow: hidden;
+}
+
+/* ============================================================
+   7. REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .drawer__panel,
+  .drawer__backdrop,
+  .nav-toggle__bar,
+  .submenu,
+  .nav-menu__link::after {
+    transition: none;
+  }
+}

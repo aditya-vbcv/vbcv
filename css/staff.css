@@ -1,0 +1,289 @@
+/* ============================================================
+   staff.css
+   ------------------------------------------------------------
+   Styles for staff.html - the school's staff directory.
+      1. Search toolbar
+      2. School leadership (principal + vice-principals)
+      3. Section titles
+      4. Group headings + name lists
+      5. Empty search state
+      6. Wider screens
+   ============================================================ */
+
+/* ============================================================
+   1. SEARCH TOOLBAR
+   Sits directly under the page banner. Without JavaScript the
+   input is simply decorative - every name is still on the page.
+   ============================================================ */
+.staff-toolbar {
+  padding-block: var(--space-lg);
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.staff-toolbar__label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+}
+
+.staff-toolbar__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xs) var(--space-sm);
+  margin-top: var(--space-2xs);
+}
+
+.staff-toolbar__input {
+  flex: 1 1 260px;
+  min-height: 44px;                 /* comfortable tap target */
+  padding: 0 var(--space-sm);
+  font: inherit;
+  font-size: var(--fs-base);
+  color: var(--color-text);
+  background-color: var(--color-canvas);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--dur-fast) var(--ease),
+              background-color var(--dur-fast) var(--ease);
+}
+
+.staff-toolbar__input:hover {
+  border-color: var(--color-accent);
+}
+
+.staff-toolbar__input:focus {
+  background-color: var(--color-surface);
+  border-color: var(--color-primary);
+}
+
+.staff-toolbar__input::placeholder {
+  color: var(--color-text-muted);
+  opacity: 1;
+}
+
+.staff-toolbar__status {
+  margin: 0;
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+/* ============================================================
+   2. SCHOOL LEADERSHIP
+   The principal gets a feature card; the four vice-principals
+   sit beside it in a small grid.
+   ============================================================ */
+.staff-lead {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.staff-principal {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-accent);
+  border-radius: var(--radius-md);
+}
+
+.staff-principal__photo {
+  flex: 0 0 auto;
+  width: 92px;
+  height: 92px;
+  object-fit: cover;
+  object-position: center 18%;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-accent-soft);
+}
+
+.staff-card {
+  padding: var(--space-md);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  transition: transform var(--dur) var(--ease),
+              box-shadow var(--dur) var(--ease);
+}
+
+.staff-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Shared bits between the principal card and the VP cards */
+.staff-card__role {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+}
+
+.staff-card__name {
+  margin-top: var(--space-3xs);
+  font-size: var(--fs-lg);
+  line-height: var(--lh-snug);
+}
+
+.staff-card__exp {
+  margin: var(--space-xs) 0 0;
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+.staff-card__num {
+  margin-right: 0.15em;
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.staff-vps {
+  display: grid;
+  gap: var(--space-sm);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* ============================================================
+   3. SECTION TITLES
+   ============================================================ */
+.staff-section__title {
+  margin-bottom: var(--space-lg);
+  font-size: var(--fs-2xl);
+}
+
+/* Short gold rule under each section title */
+.staff-section__title::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  margin-top: var(--space-sm);
+  background-color: var(--color-accent);
+  border-radius: var(--radius-pill);
+}
+
+/* ============================================================
+   4. GROUPS AND NAME LISTS
+   ============================================================ */
+.staff-group + .staff-group {
+  margin-top: var(--space-xl);
+}
+
+.staff-group__head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-xs);
+  padding-bottom: var(--space-2xs);
+  border-bottom: 1px solid var(--color-border-strong);
+}
+
+.staff-group__title {
+  margin: 0;
+  font-size: var(--fs-lg);
+}
+
+.staff-group__count {
+  font-family: var(--font-heading);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--color-accent-dark);
+}
+
+.staff-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.staff-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0 var(--space-sm);
+  padding-block: var(--space-2xs);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* The hidden attribute must beat the display:flex above */
+.staff-row[hidden] {
+  display: none;
+}
+
+.staff-row__name {
+  font-size: var(--fs-base);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.staff-row__role {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+/* ============================================================
+   5. EMPTY SEARCH STATE
+   ============================================================ */
+.staff-empty {
+  padding-block: var(--space-2xl);
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+/* ============================================================
+   6. WIDER SCREENS
+   ============================================================ */
+@media (min-width: 600px) {
+  .staff-vps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  /* Two balanced columns of names - like a printed directory */
+  .staff-list {
+    columns: 2;
+    column-gap: var(--space-xl);
+  }
+
+  .staff-row {
+    break-inside: avoid;
+  }
+}
+
+@media (min-width: 1024px) {
+  .staff-lead {
+    grid-template-columns: 340px 1fr;
+    align-items: start;
+  }
+
+  /* Used by js/staff.js when the principal is filtered out */
+  .staff-lead--compact {
+    grid-template-columns: 1fr;
+  }
+
+  .staff-principal {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .staff-principal__photo {
+    width: 100%;
+    height: 200px;
+  }
+}

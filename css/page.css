@@ -1,0 +1,89 @@
+/* ============================================================
+   page.css
+   ------------------------------------------------------------
+   Shared styles for the inner pages (leadership.html and the
+   pages still to come):
+     1. Page banner - the maroon strip under the navbar
+     2. Breadcrumb - Home / Messages
+   ============================================================ */
+
+/* ============================================================
+   1. PAGE BANNER
+   ============================================================ */
+.page-banner {
+  padding-block: var(--space-md);
+  background-color: var(--color-primary);
+  color: var(--color-text-invert);
+  /* A thin gold rule ties the banner to the rest of the site */
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.page-banner__title {
+  margin-top: var(--space-sm);
+  color: var(--color-text-invert);
+}
+
+.page-banner__lead {
+  max-width: 60ch;
+  margin-top: var(--space-xs);
+  color: var(--color-text-invert-muted);
+}
+
+@media (min-width: 900px) {
+  .page-banner {
+    padding-block: var(--space-lg);
+  }
+}
+
+/* ============================================================
+   2. BREADCRUMB
+   ============================================================ */
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2xs);
+  list-style: none;
+  font-size: var(--fs-sm);
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  color: var(--color-text-invert-muted);
+}
+
+/* The "/" between crumbs is decoration, so it lives in CSS */
+.breadcrumb li + li::before {
+  content: "/";
+  opacity: 0.55;
+}
+
+.breadcrumb a {
+  color: var(--color-text-invert-muted);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease);
+}
+
+.breadcrumb a:hover,
+.breadcrumb a:focus-visible {
+  color: var(--color-text-invert);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.breadcrumb [aria-current="page"] {
+  color: var(--color-text-invert);
+  font-weight: 500;
+}
+
+/* ============================================================
+   3. CURRENT PAGE IN THE MENU
+   The page marks its own menu link with aria-current="page".
+   ============================================================ */
+.submenu__link[aria-current="page"],
+.drawer-menu__sub a[aria-current="page"] {
+  color: var(--color-primary);
+  font-weight: 600;
+}

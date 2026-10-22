@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================================
+       Vidya Bharati Chinmaya Vidyalaya - Home Page
+       STAGE: Step 2 - Notice Board popup added
+       ============================================================ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Vidya Bharati Chinmaya Vidyalaya, Telco Colony, Jamshedpur - a CBSE affiliated school (Affiliation No. 3430015) committed to holistic education through the Chinmaya Vision Programme.">
+  <meta name="theme-color" content="#652C3B">
+
+  <title>Vidya Bharati Chinmaya Vidyalaya | Telco Colony, Jamshedpur</title>
+
+  <!-- Google Fonts: Archivo (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets (order matters: variables first, then base, then animations) -->
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/hero.css">
+  <link rel="stylesheet" href="../css/about.css">
+  <link rel="stylesheet" href="../css/stats.css">
+  <link rel="stylesheet" href="../css/popup.css">
+
+  <!-- Adds a "js" class to <html> as early as possible.
+       Scroll-reveal CSS only hides content when this class is
+       present, so the page still works with JavaScript disabled. -->
+  <script>document.documentElement.className += " js";</script>
+</head>
+
+<body class="has-hero">
+  <!-- Skip link: first thing a keyboard user can reach -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================================================
+       TOP BAR - phone, email, admission enquiry link, socials
+       ============================================================ -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <ul class="topbar__contact">
+        <li>
+          <a class="topbar__link" href="tel:+916572286829">
+            <!-- phone icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span>0657-2286829</span>
+          </a>
+        </li>
+        <li>
+          <a class="topbar__link" href="mailto:vbcvjsr@gmail.com">
+            <!-- mail icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 7-10 5L2 7"/>
+            </svg>
+            <span class="topbar__link-text">vbcvjsr@gmail.com</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="topbar__right">
+        <!-- NOTE: replace the "#" social links with the school's real pages -->
+        <ul class="topbar__social">
+          <li>
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       MAIN NAVBAR - sticky, transparent over hero, solid on scroll
+       Desktop menu is reorganised from the current site's pages.
+       NOTE: "#" links are placeholder routes to be wired to the
+       real pages later.
+       ============================================================ -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Primary">
+
+        <!-- Brand: school crest + school name -->
+        <a class="brand" href="#main">
+          <img class="brand__logo"
+               src="../images/logo/logo.png"
+               alt=""
+               width="881" height="1785"
+               decoding="async">
+          <span class="brand__text">
+            <span class="brand__name">
+              <span class="brand__name-line">Vidya Bharati</span>
+              <span class="brand__name-line">Chinmaya Vidyalaya</span>
+            </span>
+          </span>
+        </a>
+
+        <!-- Hamburger (mobile only) -->
+        <button class="nav-toggle" type="button"
+                aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+
+        <!-- Desktop menu with dropdowns -->
+        <ul class="nav-menu">
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="#about">About
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <ul class="submenu">
+              <li><a class="submenu__link" href="#about">About the School</a></li>
+              <li><a class="submenu__link" href="mvo.html">Vision &amp; Mission</a></li>
+              <li><a class="submenu__link" href="leadership.html">Messages from Leadership</a></li>
+              <li><a class="submenu__link" href="staff.html">School Staff</a></li>
+              <li><a class="submenu__link" href="cvp.html">Chinmaya Vision Programme</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="#">Academics
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <ul class="submenu">
+              <li><a class="submenu__link" href="#">Academic Programmes</a></li>
+              <li><a class="submenu__link" href="#">Departments</a></li>
+              <li><a class="submenu__link" href="#">School Calendar</a></li>
+              <li><a class="submenu__link" href="#">Achievements</a></li>
+              <li><a class="submenu__link" href="#results">Results &amp; Toppers</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="#admissions">Admissions
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <ul class="submenu">
+              <li><a class="submenu__link" href="#admissions">Admission Enquiry</a></li>
+              <li><a class="submenu__link" href="#">Nursery Admission Form</a></li>
+              <li><a class="submenu__link" href="#">Reprint Admission Form</a></li>
+              <li><a class="submenu__link" href="#">Fee Structure</a></li>
+              <li><a class="submenu__link" href="#">Age Criteria</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="#facilities">Facilities
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <ul class="submenu">
+              <li><a class="submenu__link" href="#facilities">Campus Infrastructure</a></li>
+              <li><a class="submenu__link" href="#">Library</a></li>
+              <li><a class="submenu__link" href="#">Laboratories</a></li>
+              <li><a class="submenu__link" href="#">Sports</a></li>
+              <li><a class="submenu__link" href="#">Smart Classrooms</a></li>
+              <li><a class="submenu__link" href="#">Transport</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="#gallery">Gallery
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <ul class="submenu">
+              <li><a class="submenu__link" href="#gallery">Photo Gallery</a></li>
+              <li><a class="submenu__link" href="#">Virtual Campus Tour</a></li>
+              <li><a class="submenu__link" href="#">School &amp; International Events</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="#contact">Contact
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <ul class="submenu">
+              <li><a class="submenu__link" href="#contact">Contact Us</a></li>
+              <li><a class="submenu__link" href="#contact">Location &amp; Map</a></li>
+              <li><a class="submenu__link" href="#">School Counsellor</a></li>
+              <li><a class="submenu__link" href="#">Feedback</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Desktop-only gold CTA -->
+        <div class="navbar__actions">
+          <a class="btn btn--accent" href="#admissions">Apply Now</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="main">
+
+    <!-- ============================================================
+         HERO SLIDESHOW
+         Three photos from images/slideshow, cross-fading with a slow
+         Ken Burns zoom. The photos are decorative background, so they
+         carry empty alt text and are hidden from screen readers.
+         ============================================================ -->
+    <section class="hero" id="home" data-hero aria-label="Welcome to Vidya Bharati Chinmaya Vidyalaya">
+      <div class="hero__slides" aria-hidden="true">
+        <div class="hero__slide is-active">
+          <img src="../images/slideshow/1stBlockTapovan.jpg" alt="" fetchpriority="high" decoding="async">
+        </div>
+        <div class="hero__slide">
+          <img src="../images/slideshow/puja.png" alt="" loading="lazy" decoding="async">
+        </div>
+        <div class="hero__slide">
+          <img src="../images/slideshow/exotica.jpg" alt="" loading="lazy" decoding="async">
+        </div>
+      </div>
+
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="hero__content container">
+        <span class="hero__eyebrow" data-reveal>A School with a Difference</span>
+        <h1 class="hero__title" data-reveal data-reveal-delay="100">Vidya Bharati Chinmaya Vidyalaya</h1>
+        <p class="hero__lead" data-reveal data-reveal-delay="200">
+          &ldquo;Educate children in the right way by instilling in them feelings of
+          self-respect and national pride.&rdquo;
+          <cite>&mdash; Swami Chinmayananda</cite>
+        </p>
+        <div class="hero__actions" data-reveal data-reveal-delay="300">
+          <a class="btn btn--accent btn--lg" href="#admissions">Admissions Open</a>
+          <a class="btn btn--outline-light btn--lg" href="#facilities">Explore Campus</a>
+        </div>
+      </div>
+
+      <div class="hero__controls">
+        <button class="hero__arrow hero__arrow--prev" type="button" aria-label="Previous slide">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+
+        <div class="hero__dots">
+          <button class="hero__dot" type="button" aria-label="Go to slide 1" aria-current="true"></button>
+          <button class="hero__dot" type="button" aria-label="Go to slide 2"></button>
+          <button class="hero__dot" type="button" aria-label="Go to slide 3"></button>
+        </div>
+
+        <button class="hero__arrow hero__arrow--next" type="button" aria-label="Next slide">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         QUICK LINKS STRIP (overlaps the bottom of the hero)
+         ============================================================ -->
+    <section class="quicklinks" aria-label="Quick links">
+      <div class="container">
+        <div class="quicklinks__grid" data-reveal-group>
+          <a class="quicklink" href="#" data-reveal>
+            <span class="quicklink__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="4" width="22" height="16" rx="2"/>
+                <line x1="1" y1="10" x2="23" y2="10"/>
+              </svg>
+            </span>
+            <span class="quicklink__label">Fee Structure</span>
+          </a>
+
+          <a class="quicklink" href="#results" data-reveal>
+            <span class="quicklink__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="6"/>
+                <path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/>
+              </svg>
+            </span>
+            <span class="quicklink__label">Results</span>
+          </a>
+
+          <a class="quicklink" href="#" data-reveal>
+            <span class="quicklink__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </span>
+            <span class="quicklink__label">Calendar</span>
+          </a>
+
+          <a class="quicklink" href="#" data-reveal>
+            <span class="quicklink__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+            </span>
+            <span class="quicklink__label">Downloads</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ABOUT THE SCHOOL
+         Campus photo: the Tapovan block (images/infrastructure).
+         ============================================================ -->
+    <section class="section section--canvas about" id="about">
+      <div class="container about__grid">
+        <div class="about__media" data-reveal="left">
+          <img class="about__image"
+               src="../images/infrastructure/1stBlockTapovan.jpg"
+               alt="The Tapovan block on the Vidya Bharati Chinmaya Vidyalaya campus"
+               loading="lazy" decoding="async">
+        </div>
+
+        <div class="about__body">
+          <div class="section-head" data-reveal>
+            <span class="section-head__kicker">About the School</span>
+            <h2 class="section-head__title">Welcome to Vidya Bharati Chinmaya Vidyalaya</h2>
+          </div>
+
+          <p class="about__text" data-reveal data-reveal-delay="100">
+            Vidya Bharati Chinmaya Vidyalaya, situated in the far east of
+            Jamshedpur (Jharkhand, India), has been very thoughtfully named:
+            VIDYA means education, BHARATI &ndash; that which is Indian,
+            CHINMAYA &ndash; pure knowledge, and VIDYALAYA &ndash; an abode of
+            education. Vidya Bharati Chinmaya Vidyalaya is thus an abode of
+            education imparting pure knowledge to the future citizens of India.
+          </p>
+
+          <p class="about__text" data-reveal data-reveal-delay="150">
+            The lamp in the school emblem signifies the Light of Knowledge that
+            spreads to dispel the darkness of ignorance.
+          </p>
+
+          <p class="about__text" data-reveal data-reveal-delay="200">
+            The school was established on 1 February 1979 under the patronage
+            of Tata Motors (then M/s TELCO) and Chinmaya Mission, Jamshedpur.
+          </p>
+
+          <p class="about__text" data-reveal data-reveal-delay="250">
+            The Vidyalaya has been blessed with the benign grace and blessings
+            of His Holiness Swami Chinmayananda, and is today governed by the
+            ideology enshrined in the Chinmaya Vision Programme, presented by
+            the Chinmaya Education Cell, Coimbatore, under Swami Swaroopananda,
+            Head of Chinmaya Mission Worldwide.
+          </p>
+
+          <ul class="about__facts" data-reveal data-reveal-delay="300">
+            <li class="about__fact">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="8" r="6"/>
+                <path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/>
+              </svg>
+              <span>CBSE Affiliation No. 3430015</span>
+            </li>
+            <li class="about__fact">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>Telco Colony, Jamshedpur, Jharkhand</span>
+            </li>
+            <li class="about__fact">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 6 9 17l-5-5"/>
+              </svg>
+              <span>Guided by the Chinmaya Vision Programme (CVP)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         MESSAGE FROM MADAM PRINCIPAL
+         The counters at the top are real, verifiable facts about the
+         school. The message text is reproduced as supplied; the
+         Chairman's card is temporarily removed and can return later.
+         ============================================================ -->
+    <section class="section section--sand leadership" id="leadership">
+      <div class="container">
+        <!-- AT A GLANCE (animated counters).
+             The final values are written in the HTML too, so they are
+             still correct with JavaScript switched off. -->
+        <div class="stats" data-reveal>
+          <ul class="stats__grid"
+              aria-label="Vidya Bharati Chinmaya Vidyalaya at a glance">
+            <li class="stat">
+              <span class="stat__value" data-count-to="45" data-count-suffix="+">45+</span>
+              <span class="stat__label">Years of excellence</span>
+            </li>
+            <li class="stat">
+              <span class="stat__value" data-count-to="5">5</span>
+              <span class="stat__label">Campus blocks</span>
+            </li>
+            <li class="stat">
+              <span class="stat__value" data-count-to="45">45</span>
+              <span class="stat__label">JEE Mains qualifiers, 2024</span>
+            </li>
+            <li class="stat">
+              <span class="stat__value" data-count-to="27" data-count-suffix="+">27+</span>
+              <span class="stat__label">Scored above 90 percentile</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section-head section-head--center" data-reveal>
+          <h2 class="section-head__title">Message from Madam Principal</h2>
+        </div>
+
+        <div class="leadership__grid">
+          <article class="leader" data-reveal>
+            <header class="leader__head">
+              <img class="leader__photo"
+                   src="../images/leadership/principal-mam.jpg"
+                   alt="Mrs. Mina Wilkhu, Principal, Vidya Bharati Chinmaya Vidyalaya"
+                   loading="lazy" decoding="async">
+              <div class="leader__id">
+                <h3 class="leader__name">Mrs. Mina Wilkhu</h3>
+                <p class="leader__role">Principal, Vidya Bharati Chinmaya Vidyalaya</p>
+              </div>
+            </header>
+
+            <div class="leader__message">
+              <p class="leader__salutation">Hari Om</p>
+
+              <p>
+                Today the role of a school is not only to pursue academic
+                excellence but also to motivate and empower its students to be
+                life long learners and productive members of an ever-changing
+                global society.
+              </p>
+
+              <p>
+                At Vidya Bharati Chinmaya Vidyalaya, we provide an atmosphere to
+                our students for holistic development by providing student
+                centric teaching environment. Gentle enfoldment of the innate
+                potential of the children is encouraged in order to channelize
+                their potential in the pursuit of human excellence. We impart in
+                Chinmayans the tenet of social consciousness and the capacity to
+                formulate ethical opinions.
+              </p>
+
+              <p>
+                While tramsmitting enriching and innovative learning experiences,
+                we gently edify them to be prepared to stretch their boundaries
+                further and face new challenges outside their comfort zone. The
+                Vidyalaya is striving incessantly to inculcate strong values
+                through an amalgamation of the value based scholastic and co
+                scholastic activities.
+              </p>
+
+              <p>
+                We aim at holistic development by practicing a simplistic vision
+                i.e. setting high standards of academic achievements, creating
+                experiential and experimental learning atmosphere and ensuring
+                that students 'walk values' and not merely 'talk values'. Thus,
+                students are impassioned to achieve academic excellence and
+                uphold high ideals to combat testing times and towering
+                challenges.
+              </p>
+
+              <p>
+                The parent's support strengthens our efforts in moulding the
+                future of children. Their consistent support empowers us to
+                envision lofty ideas and concretize them. I am confident that
+                with the cooperation of students, staff and parents Vidya
+                Bharati Chinmaya Vidyalaya will scale greater heights.
+              </p>
+
+              <blockquote class="leader__closing">
+                <p>ARISE, AWAKE AND STOP NOT TILL THE GOAL IS REACHED</p>
+                <cite class="leader__cite">&mdash; Swami Vivekananda</cite>
+              </blockquote>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (built in Step 10) -->
+  <footer class="site-footer">
+  </footer>
+
+  <!-- ============================================================
+       MOBILE DRAWER MENU
+       Mirrors the desktop menu as an accordion. Hidden on desktop.
+       ============================================================ -->
+  <div class="drawer" id="mobile-drawer" hidden>
+    <div class="drawer__backdrop" data-drawer-close></div>
+
+    <aside class="drawer__panel" role="dialog" aria-modal="true" aria-label="Site menu" tabindex="-1">
+      <div class="drawer__head">
+        <span class="drawer__title">Menu</span>
+        <button class="drawer__close" type="button" data-drawer-close aria-label="Close menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="drawer__nav" aria-label="Mobile">
+        <ul class="drawer-menu">
+          <li class="drawer-menu__item">
+            <button class="drawer-menu__toggle" type="button" aria-expanded="false">About
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <ul class="drawer-menu__sub">
+              <li><a href="#about">About the School</a></li>
+              <li><a href="mvo.html">Vision &amp; Mission</a></li>
+              <li><a href="leadership.html">Messages from Leadership</a></li>
+              <li><a href="staff.html">School Staff</a></li>
+              <li><a href="cvp.html">Chinmaya Vision Programme</a></li>
+            </ul>
+          </li>
+
+          <li class="drawer-menu__item">
+            <button class="drawer-menu__toggle" type="button" aria-expanded="false">Academics
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <ul class="drawer-menu__sub">
+              <li><a href="#">Academic Programmes</a></li>
+              <li><a href="#">Departments</a></li>
+              <li><a href="#">School Calendar</a></li>
+              <li><a href="#">Achievements</a></li>
+              <li><a href="#results">Results &amp; Toppers</a></li>
+            </ul>
+          </li>
+
+          <li class="drawer-menu__item">
+            <button class="drawer-menu__toggle" type="button" aria-expanded="false">Admissions
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <ul class="drawer-menu__sub">
+              <li><a href="#admissions">Admission Enquiry</a></li>
+              <li><a href="#">Nursery Admission Form</a></li>
+              <li><a href="#">Reprint Admission Form</a></li>
+              <li><a href="#">Fee Structure</a></li>
+              <li><a href="#">Age Criteria</a></li>
+            </ul>
+          </li>
+
+          <li class="drawer-menu__item">
+            <button class="drawer-menu__toggle" type="button" aria-expanded="false">Facilities
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <ul class="drawer-menu__sub">
+              <li><a href="#facilities">Campus Infrastructure</a></li>
+              <li><a href="#">Library</a></li>
+              <li><a href="#">Laboratories</a></li>
+              <li><a href="#">Sports</a></li>
+              <li><a href="#">Smart Classrooms</a></li>
+              <li><a href="#">Transport</a></li>
+            </ul>
+          </li>
+
+          <li class="drawer-menu__item">
+            <button class="drawer-menu__toggle" type="button" aria-expanded="false">Gallery
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <ul class="drawer-menu__sub">
+              <li><a href="#gallery">Photo Gallery</a></li>
+              <li><a href="#">Virtual Campus Tour</a></li>
+              <li><a href="#">School &amp; International Events</a></li>
+            </ul>
+          </li>
+
+          <li class="drawer-menu__item">
+            <button class="drawer-menu__toggle" type="button" aria-expanded="false">Contact
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <ul class="drawer-menu__sub">
+              <li><a href="#contact">Contact Us</a></li>
+              <li><a href="#contact">Location &amp; Map</a></li>
+              <li><a href="#">School Counsellor</a></li>
+              <li><a href="#">Feedback</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="drawer__foot">
+        <a class="btn btn--accent btn--block" href="#admissions">Apply Now</a>
+        <a class="btn btn--outline btn--block" href="tel:+916572286829">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          Call 0657-2286829
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ============================================================
+       MOBILE STICKY BOTTOM ACTION BAR (mobile only)
+       ============================================================ -->
+  <nav class="action-bar" aria-label="Quick actions">
+    <a class="action-bar__item" href="tel:+916572286829">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      <span>Call</span>
+    </a>
+
+    <a class="action-bar__item" href="#admissions">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <line x1="16" y1="13" x2="8" y2="13"/>
+        <line x1="16" y1="17" x2="8" y2="17"/>
+      </svg>
+      <span>Enquire</span>
+    </a>
+
+    <a class="action-bar__item" href="#contact">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+        <circle cx="12" cy="10" r="3"/>
+      </svg>
+      <span>Location</span>
+    </a>
+  </nav>
+
+  <!-- ============================================================
+       NOTICE BOARD POPUP (Step 2)
+       Opens automatically ~600ms after every page load.
+       Content below is real notice board entries from the school.
+       ============================================================ -->
+  <div class="popup" id="notice-popup" hidden>
+    <!-- Dimmed, blurred backdrop. Clicking it closes the popup. -->
+    <div class="popup__backdrop" data-popup-close></div>
+
+    <!-- The dialog itself. tabindex="-1" lets us safely move focus here. -->
+    <div class="popup__dialog"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="notice-popup-title"
+         tabindex="-1">
+
+      <div class="popup__header">
+        <h2 class="popup__title" id="notice-popup-title">Notice Board</h2>
+        <button class="popup__close" type="button" data-popup-close aria-label="Close notice board">
+          <!-- Close (X) icon, stroke-based -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Scrollable body (max-height on the dialog keeps this usable on phones) -->
+      <div class="popup__body">
+        <ul class="notice-list">
+          <li class="notice-list__item">
+            <div class="notice-list__date" aria-hidden="true">
+              <span class="notice-list__day">24</span>
+              <span class="notice-list__month">Aug</span>
+            </div>
+            <div class="notice-list__content">
+              <h3 class="notice-list__title">Sanskritotsav celebrated at Gyanam</h3>
+              <p class="notice-list__text">
+                Vidya Bharati Chinmaya Vidyalaya organised Sanskritotsav on
+                24 August 2024 at the Gyanam block.
+              </p>
+              <a class="notice-list__link link-slide" href="#">Read more</a>
+            </div>
+          </li>
+
+          <li class="notice-list__item">
+            <div class="notice-list__date" aria-hidden="true">
+              <span class="notice-list__day">08</span>
+              <span class="notice-list__month">Jul</span>
+            </div>
+            <div class="notice-list__content">
+              <h3 class="notice-list__title">Inter-house Social Science Quiz</h3>
+              <p class="notice-list__text">
+                The Social Science Quiz was held on 8 July 2024 at Gyanam.
+              </p>
+              <a class="notice-list__link link-slide" href="#">Read more</a>
+            </div>
+          </li>
+
+          <li class="notice-list__item">
+            <div class="notice-list__date" aria-hidden="true">
+              <span class="notice-list__day">27</span>
+              <span class="notice-list__month">Apr</span>
+            </div>
+            <div class="notice-list__content">
+              <h3 class="notice-list__title">Rhythm-O-Phonic for Class 12</h3>
+              <p class="notice-list__text">
+                A musical event, Rhythm-O-Phonic, was organised for Class 12 on
+                27 April 2024 at Gyanam.
+              </p>
+              <a class="notice-list__link link-slide" href="#">Read more</a>
+            </div>
+          </li>
+
+          <li class="notice-list__item">
+            <div class="notice-list__date" aria-hidden="true">
+              <span class="notice-list__day">16</span>
+              <span class="notice-list__month">Apr</span>
+            </div>
+            <div class="notice-list__content">
+              <h3 class="notice-list__title">Ramcharitmanas Paath Pratiyogita 2024</h3>
+              <p class="notice-list__text">
+                The Ramcharitmanas Paath Pratiyogita was held on 16 April 2024
+                at Gyanam.
+              </p>
+              <a class="notice-list__link link-slide" href="#">Read more</a>
+            </div>
+          </li>
+
+          <li class="notice-list__item">
+            <div class="notice-list__date" aria-hidden="true">
+              <span class="notice-list__day">01</span>
+              <span class="notice-list__month">Feb</span>
+            </div>
+            <div class="notice-list__content">
+              <h3 class="notice-list__title">45th Inception Day of the Vidyalaya</h3>
+              <p class="notice-list__text">
+                The 45th Inception Day of the Vidyalaya was celebrated on
+                1 February 2024.
+              </p>
+              <a class="notice-list__link link-slide" href="#">Read more</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- ============================================================
+       END NOTICE BOARD POPUP
+       ============================================================ -->
+
+  <!-- JavaScript files -->
+  <script src="../js/animations.js" defer></script>
+  <script src="../js/counters.js" defer></script>
+  <script src="../js/navbar.js" defer></script>
+  <script src="../js/slider.js" defer></script>
+  <script src="../js/popup.js" defer></script>
+</body>
+</html>

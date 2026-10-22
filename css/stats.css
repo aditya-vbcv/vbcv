@@ -1,0 +1,68 @@
+/* ============================================================
+   stats.css
+   ------------------------------------------------------------
+   The "At a glance" counters. They sit as a maroon card at the
+   top of the Message from Madam Principal section, on the sand
+   background. Two columns on phones, one row of four on wider
+   screens.
+   ============================================================ */
+
+.stats {
+  /* Same measure as the message card below it, so the whole
+     column of content lines up. */
+  max-width: 1040px;
+  margin-inline: auto;
+  margin-bottom: var(--space-xl);
+  padding: var(--space-lg) var(--space-sm);
+  background-color: var(--color-primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.stats__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg) var(--space-md);
+  text-align: center;
+}
+
+.stat__value {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: var(--fs-3xl);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--color-accent);
+  /* Keeps every digit the same width, so the number does not
+     jiggle sideways while it counts up. */
+  font-variant-numeric: tabular-nums;
+}
+
+.stat__label {
+  display: block;
+  margin-top: var(--space-2xs);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-text-invert-muted);
+}
+
+@media (min-width: 600px) {
+  .stats {
+    padding: var(--space-xl) var(--space-md);
+  }
+}
+
+@media (min-width: 900px) {
+  .stats__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+  }
+
+  /* A hairline divider between the four numbers (skip the first) */
+  .stat + .stat {
+    border-left: 1px solid var(--color-border-invert);
+  }
+}

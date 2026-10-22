@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================================
+       Vidya Bharati Chinmaya Vidyalaya - Staff &amp; Faculty
+       Directory of the principal, vice-principals, teachers and
+       support staff. Names taken from the school's FACULTIES page.
+       ============================================================ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Staff and faculty directory of Vidya Bharati Chinmaya Vidyalaya, Telco Colony, Jamshedpur.">
+  <meta name="theme-color" content="#652C3B">
+
+  <title>Staff &amp; Faculty | Vidya Bharati Chinmaya Vidyalaya</title>
+
+  <!-- Google Fonts: Archivo (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets (order matters: variables first, then base, then animations) -->
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/page.css">
+  <link rel="stylesheet" href="../css/staff.css">
+
+  <!-- Adds a "js" class to <html> as early as possible.
+       Scroll-reveal CSS only hides content when this class is
+       present, so the page still works with JavaScript disabled. -->
+  <script>document.documentElement.className += " js";</script>
+</head>
+
+<body>
+  <!-- Skip link: first thing a keyboard user can reach -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================================================
+       TOP BAR - phone, email, socials
+       ============================================================ -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <ul class="topbar__contact">
+        <li>
+          <a class="topbar__link" href="tel:+916572286829">
+            <!-- phone icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span>0657-2286829</span>
+          </a>
+        </li>
+        <li>
+          <a class="topbar__link" href="mailto:vbcvjsr@gmail.com">
+            <!-- mail icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 7-10 5L2 7"/>
+            </svg>
+            <span class="topbar__link-text">vbcvjsr@gmail.com</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="topbar__right">
+        <!-- NOTE: replace the "#" social links with the school's real pages -->
+        <ul class="topbar__social">
+          <li>
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       MAIN NAVBAR - sticky, transparent over hero, solid on scroll
+       Desktop menu is reorganised from the current site's pages.
+       NOTE: "#" links are placeholder routes to be wired to the
+       real pages later.
+       ============================================================ -->
+  <header class="site-header site-header--solid">
+    <div class="container">
+      <nav class="navbar" aria-label="Primary">
+
+        <!-- Brand: school crest + school name -->
+        <a class="brand" href="index.html">
+          <img class="brand__logo"
+               src="../images/logo/logo.png"
+               alt=""
+               width="881" height="1785"
+               decoding="async">
+          <span class="brand__text">
+            <span class="brand__name">
+              <span class="brand__name-line">Vidya Bharati</span>
+              <span class="brand__name-line">Chinmaya Vidyalaya</span>
+            </span>
+          </span>
+        </a>
+
+        <!-- Hamburger (mobile only) -->
+        <button class="nav-toggle" type="button"
+                aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+
+        <!-- Desktop menu with dropdowns -->
+        <ul class="nav-menu">
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="index.html#about">About
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <ul class="submenu">
+              <li><a class="submenu__link" href="index.html#about">About the School</a></li>
+              <li><a class="submenu__link" href="mvo.html">Vision &amp; Mission</a></li>
+              <li><a class="submenu__link" href="leadership.html">Messages from Leadership</a></li>
+              <li><a class="submenu__link" href="staff.html" aria-current="page">School Staff</a></li>
+              <li><a class="submenu__link" href="cvp.html">Chinmaya Vision Programme</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="#">Academics
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <ul class="submenu">
+              <li><a class="submenu__link" href="#">Academic Programmes</a></li>
+              <li><a class="submenu__link" href="#">Departments</a></li>
+              <li><a class="submenu__link" href="#">School Calendar</a></li>
+              <li><a class="submenu__link" href="#">Achievements</a></li>
+              <li><a class="submenu__link" href="index.html#results">Results &amp; Toppers</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="index.html#admissions">Admissions
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <ul class="submenu">
+              <li><a class="submenu__link" href="index.html#admissions">Admission Enquiry</a></li>
+              <li><a class="submenu__link" href="#">Nursery Admission Form</a></li>
+              <li><a class="submenu__link" href="#">Reprint Admission Form</a></li>
+              <li><a class="submenu__link" href="#">Fee Structure</a></li>
+              <li><a class="submenu__link" href="#">Age Criteria</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="index.html#facilities">Facilities
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <ul class="submenu">
+              <li><a class="submenu__link" href="index.html#facilities">Campus Infrastructure</a></li>
+              <li><a class="submenu__link" href="#">Library</a></li>
+              <li><a class="submenu__link" href="#">Laboratories</a></li>
+              <li><a class="submenu__link" href="#">Sports</a></li>
+              <li><a class="submenu__link" href="#">Smart Classrooms</a></li>
+              <li><a class="submenu__link" href="#">Transport</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="index.html#gallery">Gallery
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <ul class="submenu">
+              <li><a class="submenu__link" href="index.html#gallery">Photo Gallery</a></li>
+              <li><a class="submenu__link" href="#">Virtual Campus Tour</a></li>
+              <li><a class="submenu__link" href="#">School &amp; International Events</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="index.html#contact">Contact
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <ul class="submenu">
+              <li><a class="submenu__link" href="index.html#contact">Contact Us</a></li>
+              <li><a class="submenu__link" href="index.html#contact">Location &amp; Map</a></li>
+              <li><a class="submenu__link" href="#">School Counsellor</a></li>
+              <li><a class="submenu__link" href="#">Feedback</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Desktop-only gold CTA -->
+        <div class="navbar__actions">
+          <a class="btn btn--accent" href="index.html#admissions">Apply Now</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       MOBILE DRAWER MENU
+       Mirrors the desktop menu as an accordion. Hidden on desktop.
+       ============================================================ -->
+  <div class="drawer" id="mobile-drawer" hidden>
+    <div class="drawer__backdrop" data-drawer-close></div>
+
+    <aside class="drawer__panel" role="dialog" aria-modal="true" aria-label="Site menu" tabindex="-1">
+      <div class="drawer__head">
+        <span class="drawer__title">Menu</span>
+        <button class="drawer__close" type="button" data-drawer-close aria-label="Close menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="drawer__nav" aria-label="Mobile">
+        <ul class="drawer-menu">
+          <li class="drawer-menu__item">
+            <button class="drawer-menu__toggle" type="button" aria-expanded="false">About
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <ul class="drawer-menu__sub">
+              <li><a href="index.html#about">About the School</a></li>
+              <li><a href="mvo.html">Vision &amp; Mission</a></li>
+              <li><a href="leadership.html">Messages from Leadership</a></li>
+              <li><a href="staff.html" aria-current="page">School Staff</a></li>
+              <li><a href="cvp.html">Chinmaya Vision Programme</a></li>
+            </ul>
+          </li>
+
+          <li class="drawer-menu__item">
+            <button class="drawer-menu__toggle" type="button" aria-expanded="false">Academics
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <ul class="drawer-menu__sub">
+              <li><a href="#">Academic Programmes</a></li>
+              <li><a href="#">Departments</a></li>
+              <li><a href="#">School Calendar</a></li>
+              <li><a href="#">Achievements</a></li>
+              <li><a href="index.html#results">Results &amp; Toppers</a></li>
+            </ul>
+          </li>
+
+          <li class="drawer-menu__item">
+            <button class="drawer-menu__toggle" type="button" aria-expanded="false">Admissions
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <ul class="drawer-menu__sub">
+              <li><a href="index.html#admissions">Admission Enquiry</a></li>
+              <li><a href="#">Nursery Admission Form</a></li>
+              <li><a href="#">Reprint Admission Form</a></li>
+              <li><a href="#">Fee Structure</a></li>
+              <li><a href="#">Age Criteria</a></li>
+            </ul>
+          </li>
+
+          <li class="drawer-menu__item">
+            <button class="drawer-menu__toggle" type="button" aria-expanded="false">Facilities
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <ul class="drawer-menu__sub">
+              <li><a href="index.html#facilities">Campus Infrastructure</a></li>
+              <li><a href="#">Library</a></li>
+              <li><a href="#">Laboratories</a></li>
+              <li><a href="#">Sports</a></li>
+              <li><a href="#">Smart Classrooms</a></li>
+              <li><a href="#">Transport</a></li>
+            </ul>
+          </li>
+
+          <li class="drawer-menu__item">
+            <button class="drawer-menu__toggle" type="button" aria-expanded="false">Gallery
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <ul class="drawer-menu__sub">
+              <li><a href="index.html#gallery">Photo Gallery</a></li>
+              <li><a href="#">Virtual Campus Tour</a></li>
+              <li><a href="#">School &amp; International Events</a></li>
+            </ul>
+          </li>
+
+          <li class="drawer-menu__item">
+            <button class="drawer-menu__toggle" type="button" aria-expanded="false">Contact
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <ul class="drawer-menu__sub">
+              <li><a href="index.html#contact">Contact Us</a></li>
+              <li><a href="index.html#contact">Location &amp; Map</a></li>
+              <li><a href="#">School Counsellor</a></li>
+              <li><a href="#">Feedback</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="drawer__foot">
+        <a class="btn btn--accent btn--block" href="index.html#admissions">Apply Now</a>
+        <a class="btn btn--outline btn--block" href="tel:+916572286829">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          Call 0657-2286829
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ============================================================
+       MOBILE STICKY BOTTOM ACTION BAR (mobile only)
+       ============================================================ -->
+  <nav class="action-bar" aria-label="Quick actions">
+    <a class="action-bar__item" href="tel:+916572286829">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      <span>Call</span>
+    </a>
+
+    <a class="action-bar__item" href="index.html#admissions">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <line x1="16" y1="13" x2="8" y2="13"/>
+        <line x1="16" y1="17" x2="8" y2="17"/>
+      </svg>
+      <span>Enquire</span>
+    </a>
+
+    <a class="action-bar__item" href="index.html#contact">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+        <circle cx="12" cy="10" r="3"/>
+      </svg>
+      <span>Location</span>
+    </a>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+
+  <!-- MAIN CONTENT -->
+
+  <!-- MAIN CONTENT -->
+  <main id="main">
+
+    <!-- ============================================================
+         PAGE BANNER
+         ============================================================ -->
+    <section class="page-banner">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Staff &amp; Faculty</li>
+          </ol>
+        </nav>
+
+        <h1 class="page-banner__title">Staff &amp; Faculty</h1>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SEARCH
+         Filters every entry below by name or subject. Without
+         JavaScript the full directory is simply shown.
+         ============================================================ -->
+    <section class="staff-toolbar" role="search" aria-label="Search the staff directory">
+      <div class="container">
+        <label class="staff-toolbar__label" for="staff-search">Find a member of staff</label>
+        <div class="staff-toolbar__row">
+          <input class="staff-toolbar__input"
+                 id="staff-search"
+                 type="search"
+                 placeholder="Name or subject, e.g. Sharma or Physics"
+                 autocomplete="off"
+                 spellcheck="false">
+          <p class="staff-toolbar__status" id="staff-search-status" aria-live="polite">145 members</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SCHOOL LEADERSHIP - principal and vice-principals
+         ============================================================ -->
+    <section class="section section--canvas staff-section" data-staff-group>
+      <div class="container">
+        <h2 class="staff-section__title">School Leadership</h2>
+          <div class="staff-lead" data-staff-group>
+            <article class="staff-principal" data-staff-entry>
+              <img class="staff-principal__photo"
+                   src="../images/leadership/principal-mam.jpg"
+                   alt="Mrs. Mina Wilkhu, Principal"
+                   width="4000" height="3000" loading="lazy" decoding="async">
+              <div class="staff-principal__body">
+                <p class="staff-card__role">Principal</p>
+                <h3 class="staff-card__name">Mrs. Mina Wilkhu</h3>
+                <p class="staff-card__exp"><span class="staff-card__num">21</span> years of experience</p>
+              </div>
+            </article>
+
+            <ul class="staff-vps">
+                <li class="staff-card" data-staff-entry>
+                  <p class="staff-card__role">Vice-Principal</p>
+                  <h3 class="staff-card__name">Mr. Man Singh</h3>
+                  <p class="staff-card__exp"><span class="staff-card__num">40</span> years of experience</p>
+                </li>
+                <li class="staff-card" data-staff-entry>
+                  <p class="staff-card__role">Vice-Principal</p>
+                  <h3 class="staff-card__name">Mr. Tapas Chakraborty</h3>
+                  <p class="staff-card__exp"><span class="staff-card__num">31</span> years of experience</p>
+                </li>
+                <li class="staff-card" data-staff-entry>
+                  <p class="staff-card__role">Vice-Principal</p>
+                  <h3 class="staff-card__name">Dr. Sarita Kumari</h3>
+                  <p class="staff-card__exp"><span class="staff-card__num">18</span> years of experience</p>
+                </li>
+                <li class="staff-card" data-staff-entry>
+                  <p class="staff-card__role">Vice-Principal</p>
+                  <h3 class="staff-card__name">Mr. Y. Srinivas</h3>
+                  <p class="staff-card__exp"><span class="staff-card__num">12</span> years of experience</p>
+                </li>
+            </ul>
+          </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         COORDINATORS &amp; HEADS
+         ============================================================ -->
+    <section class="section section--white staff-section" data-staff-group>
+      <div class="container">
+        <h2 class="staff-section__title">Coordinators &amp; Heads</h2>
+          <div class="staff-group" data-staff-group>
+            <div class="staff-group__head">
+              <h3 class="staff-group__title">Incharges</h3>
+              <span class="staff-group__count" data-staff-count>3</span>
+            </div>
+            <ul class="staff-list">
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Mr. Tapan Bishnu</span>
+              <span class="staff-row__role">Lab Incharge · PGT / Physics</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Mr. Amit Bose</span>
+              <span class="staff-row__role">Discipline Incharge · PGT / Accountancy</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Anusri Patnaik</span>
+              <span class="staff-row__role">CVP Incharge · PGT / English</span>
+            </li>
+            </ul>
+          </div>
+          <div class="staff-group" data-staff-group>
+            <div class="staff-group__head">
+              <h3 class="staff-group__title">Administrator</h3>
+              <span class="staff-group__count" data-staff-count>1</span>
+            </div>
+            <ul class="staff-list">
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Janaki Ravi</span>
+              <span class="staff-row__role">Administrator · PGT / FMM</span>
+            </li>
+            </ul>
+          </div>
+          <div class="staff-group" data-staff-group>
+            <div class="staff-group__head">
+              <h3 class="staff-group__title">Heads of Department</h3>
+              <span class="staff-group__count" data-staff-count>6</span>
+            </div>
+            <ul class="staff-list">
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. R. Ramalakshmi</span>
+              <span class="staff-row__role">PGT / Mathematics</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Sulagna Aich</span>
+              <span class="staff-row__role">PGT / Social Science</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Tania Das</span>
+              <span class="staff-row__role">PGT / English</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Dipti Kumari</span>
+              <span class="staff-row__role">PGT / Commerce</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Sahana</span>
+              <span class="staff-row__role">PGT / Science</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Suchitra Singh</span>
+              <span class="staff-row__role">PGT / Hindi, Sanskrit</span>
+            </li>
+            </ul>
+          </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TEACHING FACULTY
+         ============================================================ -->
+    <section class="section section--canvas staff-section" data-staff-group>
+      <div class="container">
+        <h2 class="staff-section__title">Teaching Faculty</h2>
+          <div class="staff-group" data-staff-group>
+            <div class="staff-group__head">
+              <h3 class="staff-group__title">Secondary Section</h3>
+              <span class="staff-group__count" data-staff-count>54</span>
+            </div>
+            <ul class="staff-list">
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Mr. Anirban Bhowmick</span>
+              <span class="staff-row__role">PGT / Chemistry</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Manisha Choudhary</span>
+              <span class="staff-row__role">PGT / Chemistry</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Amrita Guha</span>
+              <span class="staff-row__role">PGT / Biology</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Namrata Verma</span>
+              <span class="staff-row__role">PGT / Business Studies</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Mr. Lakshya Singh</span>
+              <span class="staff-row__role">PGT / FMM</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Pallabi Majumdar</span>
+              <span class="staff-row__role">PGT / Computer Science</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Eshita Kanjilal</span>
+              <span class="staff-row__role">PGT / English</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Indu Kumari</span>
+              <span class="staff-row__role">PGT / Chemistry</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. J S V Lakshmi</span>
+              <span class="staff-row__role">PGT / Economics</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Jagjit Kaur Kalsi</span>
+              <span class="staff-row__role">PGT / Business Studies</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Mr. Joydeep Mukherjee</span>
+              <span class="staff-row__role">PGT / English</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Mr. Rahul Prasad</span>
+              <span class="staff-row__role">PGT / Computer</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Mr. Ratnesh Kumar</span>
+              <span class="staff-row__role">PGT / Social Science</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Mr. Koushik Kumar Kabi</span>
+              <span class="staff-row__role">PGT / Mathematics</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Mr. Surjeet Kundu</span>
+              <span class="staff-row__role">PGT / Physics</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Mr. Awnish Kumar</span>
+              <span class="staff-row__role">PGT / Mathematics</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Mr. Satish Kumar Singh</span>
+              <span class="staff-row__role">PGT / Computer Science</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Vidya Padala</span>
+              <span class="staff-row__role">PGT / Biology</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Shalini Kumar</span>
+              <span class="staff-row__role">TGT / Hindi</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Harvinder Kaur</span>
+              <span class="staff-row__role">TGT / Social Science</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Nilima Sahay</span>
+              <span class="staff-row__role">TGT / Social Science</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Pratibha Singh</span>
+              <span class="staff-row__role">TGT / Hindi</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Mousumi Dasgupta</span>
+              <span class="staff-row__role">TGT / Mathematics</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Madhushree</span>
+              <span class="staff-row__role">TGT / Physics</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Mita Mishra</span>
+              <span class="staff-row__role">TGT / English</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Mamoni Bishnu</span>
+              <span class="staff-row__role">TGT / Social Science</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Ranjita Sahoo</span>
+              <span class="staff-row__role">TGT / English</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Archana</span>
+              <span class="staff-row__role">TGT / Hindi</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Soma Das</span>
+              <span class="staff-row__role">TGT / English</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Veenita Kumari</span>
+              <span class="staff-row__role">TGT / English</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Kumari Payal</span>
+              <span class="staff-row__role">TGT / English</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Mamata Sinha</span>
+              <span class="staff-row__role">TGT / Chemistry</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Sutapa Giri</span>
+              <span class="staff-row__role">TGT / Social Science</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. D Srilatha</span>
+              <span class="staff-row__role">TGT / Mathematics</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Anju Kumari</span>
+              <span class="staff-row__role">TGT / Hindi</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Shobha Mishra</span>
+              <span class="staff-row__role">TGT / Biology</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Rashmi Karn</span>
+              <span class="staff-row__role">TGT / Hindi</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Banashree Mahato</span>
+              <span class="staff-row__role">TGT / Chemistry</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Abira Ghosh</span>
+              <span class="staff-row__role">TGT / Computer Science</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Chandrawati Kumari</span>
+              <span class="staff-row__role">TGT / Hindi</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Priya Kumari</span>
+              <span class="staff-row__role">TGT / Social Science</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Asha Pandey</span>
+              <span class="staff-row__role">TGT / Hindi</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Poonam Prasad</span>
+              <span class="staff-row__role">TGT / Mathematics</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Shashi Singh</span>
+              <span class="staff-row__role">TGT / Science</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Anjana Thakur</span>
+              <span class="staff-row__role">TGT / Mathematics</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Mr. Rohit Kumar Agarwal</span>
+              <span class="staff-row__role">TGT / Computer</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Shweta Sen</span>
+              <span class="staff-row__role">TGT / English</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Kumkum Ojha</span>
+              <span class="staff-row__role">TGT / Mathematics</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Kasturi Chakraborty</span>
+              <span class="staff-row__role">TGT / English</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Upasana Saikia</span>
+              <span class="staff-row__role">TGT / Social Science</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Neelam Dubey</span>
+              <span class="staff-row__role">TGT / Hindi</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Mr. Vikram Rath</span>
+              <span class="staff-row__role">TGT / Science</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Sweta Ojha</span>
+              <span class="staff-row__role">TGT / English</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Dolla Sarkar</span>
+              <span class="staff-row__role">TGT / Mathematics</span>
+            </li>
+            </ul>
+          </div>
+          <div class="staff-group" data-staff-group>
+            <div class="staff-group__head">
+              <h3 class="staff-group__title">Primary Section</h3>
+              <span class="staff-group__count" data-staff-count>53</span>
+            </div>
+            <ul class="staff-list">
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Tanushree Kar</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Manjula Barjo</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Nimisha Singh</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Rakhi Pati</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Ieera Mahajan</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. A Uma Kumari</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Mistu Kour</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Harpreet Kaur</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Anuja Prasad</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Tanushree Sinha</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Mandeep Kaur</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. G. Bharati</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Tina Sarkar</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Hajinder Kaur</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Sangeeta Sharma</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Prateeti Ghosh</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Suman Choudhary</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. V Rajalakshmi</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. K Sunita</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Ritu Verma</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Alika Kumari</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Arundhati Biswas</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Ankita Singh</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Nandini Seth</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Satabdi Das</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Satabdi Banerjee</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Rajni Gupta</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Sneha Chandak</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Rinku Kumari</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Ruhi</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Priya Kumari</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Kumari Ritu</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Seema Kumari</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Arti Pandey</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Rajni Jyoti</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Ranjana Pandey</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Vibha Ranjan</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Archana Singh</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Sudipta Dutta</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Jaya Kumari</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Pragnya Paramita Das</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Debashree Choudhury</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Ruma Bhattacharjee Dey</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Prity Kumari</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Swati Sinha</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Nisha Topno</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Rani Shiwani</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Moumita Sarkar</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Nilu Choudhary</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Tripti Singh</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Prabhjot Kaur</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Shobha Devi</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Khushbu Birnet</span>
+              <span class="staff-row__role">Primary Teacher</span>
+            </li>
+            </ul>
+          </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SUPPORT STAFF
+         ============================================================ -->
+    <section class="section section--white staff-section" data-staff-group>
+      <div class="container">
+        <h2 class="staff-section__title">Support Staff</h2>
+          <div class="staff-group" data-staff-group>
+            <div class="staff-group__head">
+              <h3 class="staff-group__title">Non-Scholastic Staff</h3>
+              <span class="staff-group__count" data-staff-count>9</span>
+            </div>
+            <ul class="staff-list">
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Mr. Ajay Kumar</span>
+              <span class="staff-row__role">TGT / Art</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Mr. Avijit Gupta</span>
+              <span class="staff-row__role">TGT / Art</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Aparna Chakraborty</span>
+              <span class="staff-row__role">Primary Dance Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Shweta Kumari</span>
+              <span class="staff-row__role">P.E.T</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Mr. Rohit Karmakar</span>
+              <span class="staff-row__role">Dance Teacher</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Kamaldeep Kaur</span>
+              <span class="staff-row__role">PRT</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Puja Ghosh</span>
+              <span class="staff-row__role">PRT</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Sweta Sharma</span>
+              <span class="staff-row__role">PRT</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Priti Lata Layek Seth</span>
+              <span class="staff-row__role">PRT</span>
+            </li>
+            </ul>
+          </div>
+          <div class="staff-group" data-staff-group>
+            <div class="staff-group__head">
+              <h3 class="staff-group__title">Laboratory, Library &amp; ATL</h3>
+              <span class="staff-group__count" data-staff-count>6</span>
+            </div>
+            <ul class="staff-list">
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Mr. Nirupam Bhattacharya</span>
+              <span class="staff-row__role">Lab Asst. (Physics)</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Mr. Ashmit Saha</span>
+              <span class="staff-row__role">Lab Asst. (Biology)</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Anita Pradhan</span>
+              <span class="staff-row__role">PGT / Sr. Librarian</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Sindhu K.K.</span>
+              <span class="staff-row__role">Jr. Librarian</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Mr. Ramesh</span>
+              <span class="staff-row__role">Library Attendant</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Yamini Kunari Jampini</span>
+              <span class="staff-row__role">ATL-Incharge</span>
+            </li>
+            </ul>
+          </div>
+          <div class="staff-group" data-staff-group>
+            <div class="staff-group__head">
+              <h3 class="staff-group__title">Consultants</h3>
+              <span class="staff-group__count" data-staff-count>2</span>
+            </div>
+            <ul class="staff-list">
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Mr. D. C. Srivastava</span>
+              <span class="staff-row__role">PGT / Physics</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Mr. Amal Kumar Tripathy</span>
+              <span class="staff-row__role">PGT / Chemistry</span>
+            </li>
+            </ul>
+          </div>
+          <div class="staff-group" data-staff-group>
+            <div class="staff-group__head">
+              <h3 class="staff-group__title">Office</h3>
+              <span class="staff-group__count" data-staff-count>6</span>
+            </div>
+            <ul class="staff-list">
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Mr. G. Rama Rao</span>
+              <span class="staff-row__role">Accountant</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Nandini Das</span>
+              <span class="staff-row__role">Office Assistant (Acc.)</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Vandana</span>
+              <span class="staff-row__role">Office Asst.</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Seema Kumari</span>
+              <span class="staff-row__role">Office Asst.</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Ms. Priyanka Anjan</span>
+              <span class="staff-row__role">Office Asst. (HR)</span>
+            </li>
+            <li class="staff-row" data-staff-entry>
+              <span class="staff-row__name">Mr. Bijendra Kumar</span>
+              <span class="staff-row__role">I.D.S / PREAK</span>
+            </li>
+            </ul>
+          </div>
+      </div>
+    </section>
+
+    <!-- Shown only when the search finds nothing -->
+    <p class="staff-empty" id="staff-search-empty" hidden>
+      No member of staff matches that search.
+    </p>
+
+  </main>
+
+  <!-- JavaScript files -->
+  <script src="../js/animations.js" defer></script>
+  <script src="../js/navbar.js" defer></script>
+  <script src="../js/staff.js" defer></script>
+</body>
+</html>

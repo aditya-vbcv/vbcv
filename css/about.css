@@ -1,0 +1,231 @@
+/* ============================================================
+   about.css
+   ------------------------------------------------------------
+   1. About the school - welcome text beside an image
+      (stacks on mobile, two columns from 900px)
+   2. Message from Madam Principal
+   ============================================================ */
+
+/* ============================================================
+   1. ABOUT THE SCHOOL
+   ============================================================ */
+.about__grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.about__media {
+  position: relative;
+}
+
+/* Campus photo. aspect-ratio reserves the space so the layout does
+   not shift while the image loads. */
+.about__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+/* A thin gold frame accents the media block on wider screens */
+.about__media::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+  width: 40%;
+  height: 40%;
+  border-right: 3px solid var(--color-accent);
+  border-bottom: 3px solid var(--color-accent);
+  border-radius: 0 0 var(--radius-md) 0;
+  pointer-events: none;
+}
+
+.about__text {
+  margin-top: var(--space-sm);
+  color: var(--color-text-muted);
+}
+
+.about__text:first-of-type {
+  margin-top: var(--space-md);
+  font-size: var(--fs-md);
+  color: var(--color-text);
+}
+
+/* Small fact list under the welcome text */
+.about__facts {
+  display: grid;
+  gap: var(--space-2xs);
+  margin: var(--space-md) 0;
+  padding: var(--space-md) 0 0;
+  list-style: none;
+  border-top: 1px solid var(--color-border);
+}
+
+.about__fact {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2xs);
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+.about__fact svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--color-accent);
+}
+
+@media (min-width: 900px) {
+  .about__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+  }
+
+  /* Photo on the left for a bit of visual variety. It now travels
+     with the visitor while the longer welcome text is read. */
+  .about__media {
+    order: -1;
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-md));
+  }
+}
+
+/* ============================================================
+   2. MESSAGE FROM MADAM PRINCIPAL
+   ------------------------------------------------------------
+   Only one message is shown for now (the Chairman's card is
+   temporarily removed). To bring a second card back, restore
+   `grid-template-columns: repeat(2, 1fr)` on .leadership__grid
+   at a wide breakpoint.
+   ============================================================ */
+.leadership__grid {
+  display: grid;
+  grid-template-columns: 1fr; /* single message */
+  gap: var(--space-md);
+  max-width: 1040px; /* wide card so the message reads across, not down */
+  margin-inline: auto;
+}
+
+.leader {
+  padding: var(--space-lg);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xs);
+}
+
+/* Photo + name sit together in a header row */
+.leader__head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Principal's portrait. The source photo is landscape, so a square
+   frame with object-fit keeps the crop gentle and centred. */
+.leader__photo {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: var(--radius-md);
+  border: 3px solid var(--color-accent);
+}
+
+.leader__name {
+  font-size: var(--fs-lg);
+}
+
+.leader__role {
+  margin-top: var(--space-3xs);
+  font-family: var(--font-heading);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+/* The message itself */
+.leader__message {
+  margin-top: var(--space-md);
+}
+
+.leader__message p {
+  color: var(--color-text-muted);
+}
+
+.leader__message p + p {
+  margin-top: var(--space-sm);
+}
+
+.leader__salutation {
+  font-family: var(--font-heading);
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* Closing quote (Swami Vivekananda) */
+.leader__closing {
+  margin: var(--space-md) 0 0;
+  padding: var(--space-sm) 0 0 var(--space-sm);
+  border-left: 3px solid var(--color-accent);
+}
+
+.leader__closing p {
+  font-family: var(--font-heading);
+  font-size: var(--fs-md);
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--color-primary);
+}
+
+.leader__cite {
+  display: block;
+  margin-top: var(--space-2xs);
+  font-size: var(--fs-sm);
+  font-style: normal;
+  color: var(--color-accent-dark);
+}
+
+@media (min-width: 600px) {
+  .leader {
+    padding: var(--space-xl);
+  }
+
+  .leader__photo {
+    width: 156px;
+    height: 156px;
+  }
+
+  .leader__head {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-lg);
+  }
+}
+
+@media (min-width: 1024px) {
+  /* On wide screens the long message flows into two columns, so the
+     card reads across (more horizontal) instead of running straight
+     down the page. */
+  .leader__message {
+    column-count: 2;
+    column-gap: var(--space-xl);
+    column-rule: 1px solid var(--color-border);
+  }
+
+  /* Keep the closing quote whole rather than split across columns */
+  .leader__closing {
+    break-inside: avoid;
+  }
+}

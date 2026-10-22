@@ -1,0 +1,144 @@
+/* ============================================================
+   cvp.css
+   ------------------------------------------------------------
+   Page styles for cvp.html - the Chinmaya Vision Programme.
+      1. Introduction
+      2. (upcoming) the four heads of the programme
+   ============================================================ */
+
+/* ============================================================
+   1. INTRODUCTION
+   A narrow, book-like column: one large opening statement,
+   then the explanatory paragraphs, then the lead-in to the
+   four heads.
+   ============================================================ */
+.cvp-intro__lead {
+  font-size: var(--fs-lg);
+  line-height: 1.55;
+  color: var(--color-text);
+}
+
+.cvp-intro__body {
+  margin-top: var(--space-lg);
+  font-size: var(--fs-md);
+  line-height: var(--lh-base);
+  color: var(--color-text);
+}
+
+.cvp-intro__body p + p {
+  margin-top: var(--space-md);
+}
+
+/* "The CVP can be identified under four heads."
+   A thin gold rule separates it from the explanation above. */
+.cvp-intro__heads {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-accent);
+  font-family: var(--font-heading);
+  font-size: var(--fs-md);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* ============================================================
+   2. THE FOUR HEADS
+   One block per head: an image plate beside the text. On wide
+   screens they sit side by side; add .cvp-head--reverse to a
+   block to put the image on the right.
+   ============================================================ */
+.cvp-head {
+  display: grid;
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+/* The intro already ends with generous space, so the heads
+   section does not need its own top padding. */
+.cvp-heads {
+  padding-top: 0;
+}
+
+.cvp-head + .cvp-head {
+  margin-top: var(--space-2xl);
+}
+
+/* The image sits in a soft "plate" so all four heads line up,
+   even though the supplied images have different proportions. */
+.cvp-head__figure {
+  margin: 0;
+  padding: var(--space-sm);
+  aspect-ratio: 4 / 3;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xs);
+}
+
+.cvp-head__figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cvp-head__num {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--color-accent-dark);
+}
+
+.cvp-head__title {
+  margin-top: var(--space-3xs);
+  font-size: var(--fs-xl);
+}
+
+.cvp-head__body p {
+  margin-top: var(--space-sm);
+  font-size: var(--fs-md);
+  line-height: var(--lh-base);
+  color: var(--color-text);
+}
+
+@media (min-width: 900px) {
+  .cvp-head {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    gap: var(--space-xl);
+  }
+
+  /* Mirrored block: text left, image right (same column widths) */
+  .cvp-head--reverse {
+    grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+  }
+
+  .cvp-head--reverse .cvp-head__figure {
+    order: 2;
+  }
+}
+
+/* ============================================================
+   3. CLOSING STATEMENTS
+   Three short blocks, each introduced by a gold rule. They sit
+   on white to separate them from the four heads above.
+   ============================================================ */
+.cvp-outro__grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.cvp-outro__item {
+  padding-top: var(--space-md);
+  border-top: 2px solid var(--color-accent);
+  font-size: var(--fs-md);
+  line-height: var(--lh-base);
+  color: var(--color-text);
+}
+
+@media (min-width: 900px) {
+  .cvp-outro__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+  }
+}

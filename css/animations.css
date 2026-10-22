@@ -1,0 +1,177 @@
+/* ============================================================
+   animations.css
+   ------------------------------------------------------------
+   All motion in one place. Animations only ever use transform
+   and opacity, so they stay smooth (GPU friendly).
+
+   The signature easing curve lives in variables.css:
+     --ease: cubic-bezier(0.22, 1, 0.36, 1)
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. SCROLL REVEAL
+   ------------------------------------------------------------
+   Add data-reveal to any element. JavaScript (js/animations.js)
+   adds the class .is-visible once the element scrolls into view.
+
+   Optional attributes:
+     data-reveal="up" | "left" | "right" | "zoom"   (default: up)
+     data-reveal-delay="150"                         (milliseconds)
+
+   The styles are scoped to ".js" (a class added to <html> by a
+   tiny script), so if JavaScript is switched off everything is
+   simply visible - never stuck hidden.
+   ------------------------------------------------------------ */
+.js [data-reveal] {
+  opacity: 0;
+  /* Uses the independent "translate" / "scale" properties rather than
+     the shorthand "transform", so a hover effect such as .hover-lift
+     can still use transform without fighting the reveal animation. */
+  translate: 0 28px;
+  transition:
+    opacity var(--dur-slow) var(--ease),
+    translate var(--dur-slow) var(--ease),
+    scale var(--dur-slow) var(--ease);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, translate, scale;
+}
+
+.js [data-reveal="left"] {
+  translate: -32px 0;
+}
+
+.js [data-reveal="right"] {
+  translate: 32px 0;
+}
+
+.js [data-reveal="zoom"] {
+  translate: 0 0;
+  scale: 0.94;
+}
+
+/* The revealed end state (works for every direction) */
+.js [data-reveal].is-visible {
+  opacity: 1;
+  translate: 0 0;
+  scale: 1;
+}
+
+/* Stagger helper: reveal direct children one after another.
+   Apply data-reveal to each child and use data-reveal-delay,
+   or use this class on the parent for automatic spacing. */
+@media (min-width: 600px) {
+  .js [data-reveal-group] > [data-reveal]:nth-child(2) { --reveal-delay: 100ms; }
+  .js [data-reveal-group] > [data-reveal]:nth-child(3) { --reveal-delay: 200ms; }
+  .js [data-reveal-group] > [data-reveal]:nth-child(4) { --reveal-delay: 300ms; }
+  .js [data-reveal-group] > [data-reveal]:nth-child(5) { --reveal-delay: 400ms; }
+  .js [data-reveal-group] > [data-reveal]:nth-child(6) { --reveal-delay: 500ms; }
+}
+
+/* ------------------------------------------------------------
+   2. HOVER MICRO-INTERACTIONS
+   ------------------------------------------------------------ */
+
+/* A card/box that lifts gently on hover */
+.hover-lift {
+  transition:
+    transform var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease);
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+/* A text link whose underline slides in from the left */
+.link-slide {
+  position: relative;
+  display: inline-block;
+}
+
+.link-slide::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur) var(--ease);
+}
+
+.link-slide:hover::after,
+.link-slide:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* ------------------------------------------------------------
+   3. KEYFRAMES
+   Small, reusable named animations. Steps 2-10 build on these.
+   ------------------------------------------------------------ */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slow zoom used behind hero slides */
+@keyframes ken-burns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.12);
+  }
+}
+
+/* ------------------------------------------------------------
+   4. REDUCED MOTION
+   ------------------------------------------------------------
+   If the visitor has asked their device to reduce motion, stop
+   all animation and show final states immediately.
+   ------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .js [data-reveal] {
+    opacity: 1;
+    translate: none;
+    scale: none;
+    transition: none;
+  }
+
+  .hover-lift:hover {
+    transform: none;
+  }
+
+  .link-slide::after {
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
