@@ -5,6 +5,10 @@ school (Affiliation No. 3430015).
 
 A static, dependency-free site built with plain HTML, CSS and JavaScript.
 
+**Live site:** https://aditya-vbcv.github.io/vbcv/
+
+The root `index.html` forwards to `html/index.html`, since all pages live in `html/`.
+
 ## Pages
 
 | Page | File | Description |
